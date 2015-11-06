@@ -11,7 +11,7 @@ RUN echo 'root:root' | chpasswd
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 
-RUN apt-get upgrade && apt-get install -y curl emacs cl-swank slim sbcl
+RUN apt-get install -y curl emacs cl-swank slim sbcl
 
 RUN curl -O http://beta.quicklisp.org/quicklisp.lisp
 RUN curl -O http://beta.quicklisp.org/quicklisp.lisp.asc
